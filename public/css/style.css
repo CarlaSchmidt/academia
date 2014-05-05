@@ -95,7 +95,17 @@ table{
     width: 500px;
     margin-top: 90px;
 }
-tr:hover{
+tr.teste2{
+    height: 20px;
+}
+tr.teste2:hover{
     background-color: #A64B00;
-    color: white;    
+    color: white;
+    height: 30px;
+}
+a{
+    color: white;
+}
+tr.a:hover{
+    color: white;
 }

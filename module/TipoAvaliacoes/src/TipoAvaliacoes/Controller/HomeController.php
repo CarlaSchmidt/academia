@@ -73,7 +73,7 @@ class HomeController extends AbstractActionController {
         // se id = 0 ou não informado redirecione para contatos
         if (!$id) {
             // adicionar mensagem
-            $this->flashMessenger()->addMessage("Contato não encotrado");
+            $this->flashMessenger()->addMessage("Tipo não encontrado");
 
             // redirecionar para action index
             return $this->redirect()->toRoute('home');

@@ -18,12 +18,12 @@
                 echo 'Sem Dados no Banco';
             }else{
                 foreach ($this->avaliacoes as $avaliacoes) : ?>
-                <tr>
-                    <td><?php echo $this->escapeHtml($avaliacoes->tpaval_id); ?></td>
+        <tr class="teste2">
+                   
                     <td><?php echo $this->escapeHtml($avaliacoes->cd); ?></td>
                     <td><?php echo $this->escapeHtml($avaliacoes->descr); ?></td>
                     <td>
-                        <a title="Visualizar" href="<?php echo $this->url('home', array("action" => "detalhes", "tpaval_id" => $avaliacoes->tpaval_id,)); ?>">
+                        <a title="Visualizar" class="glyphicon glyphicon-search" href="<?php echo $this->url('home', array("action" => "detalhes", "tpaval_id" => $avaliacoes->tpaval_id,)); ?>">
                         </a>
                     </td>
                 </tr>
