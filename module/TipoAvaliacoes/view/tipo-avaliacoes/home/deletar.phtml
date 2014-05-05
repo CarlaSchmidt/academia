@@ -1,0 +1,11 @@
+<p>Realmente deseja excluir o código: <?php echo $this->tpaval_id?>?</p>
+<?php
+$url = $this->url('home', array('action' => 'deletar','tpaval_id'=> $this->tpaval_id,));
+?>
+<form action="<?php echo $url; ?>" method="post">
+<div>
+    <input type="hidden" name="tpaval_id" value="<?php echo (int) $this->tpaval_id; ?>" />
+    <input type="submit" name="deletar" value="Sim" />
+    <input type="submit" name="deletar" value="Não" />
+</div>
+</form>

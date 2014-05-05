@@ -1,0 +1,17 @@
+<div id="corpo-table"> 
+
+    <table class="table table-bordered">
+
+        <tr>
+            <td>Codigo:<?php echo $this->escapeHtml($this->form["cd"]); ?></td>
+        </tr>
+        <tr>
+            <td>Descrição:<?php echo $this->escapeHtml($this->form["descr"]); ?></td>
+        </tr>
+    </table>
+    <div class="panel-footer">
+        <a class="but2" title="Excluir" href="<?php echo $this->url('home', array('action' => 'deletar', 'tpaval_id' => $this->tpaval_id)); ?>">Excluir</a>
+        <a href="<?php echo $this->url('home', array('action' => 'editar', 'tpaval_id' => $this->tpaval_id)); ?>"title="Editar" class="but3">Editar</a>
+        <a href="<?php echo $this->url('home'); ?>" title="Voltar" class="but2">Voltar</a>
+    </div>
+</div>

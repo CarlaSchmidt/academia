@@ -1,0 +1,24 @@
+<div id="corpo-table"> 
+
+   <div class="panel-title">
+       Novo Tipo de Avaliação
+   </div>
+   <?php
+        $form = $this->form;
+        $form->setAttribute('action', $this->url('novo', array('action' => 'novo')));
+        $form->prepare();
+   ?>
+   <?php echo $this->form()->openTag($form); ?>
+
+   <table class="table table-bordered">
+        <tr>
+            <td> <?php echo $this->formRow($form->get('cd')); ?></td>
+        </tr>
+        <tr>
+            <td> <?php echo $this->formRow($form->get('descr')); ?></td>
+        </tr>
+   </table>
+    <?php echo $this->formSubmit($form->get('submit')); ?>
+   <?php echo $this->form()->closeTag(); ?>
+   <a href="<?php echo $this->url('home', array('action' => 'index')) ?>" class="but3" title="Voltar">Voltar</a>
+</div>

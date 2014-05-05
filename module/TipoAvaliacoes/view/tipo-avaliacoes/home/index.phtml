@@ -1,0 +1,32 @@
+<div id="corpo-table"> 
+    <h1>Tipo de Avaliações</h1>
+    <?php echo $this->form()->openTag($form); ?>
+    <div class="teste">
+    <table>
+        <tr>
+            <a href="<?php echo $this->url('home', array('action' => 'novo')) ?>" class="but3" title="Novo">Novo</a>
+            <td> <?php echo $this->formRow($form->get('busca')); ?></td>
+            <button type="submit" class="but3"><span class="glyphicon glyphicon-search"></span></button>
+            
+        </tr>
+    </table>
+    </div>
+    <?php echo $this->form()->closeTag(); ?>
+    <table class="tabela">
+        <?php 
+            if($this->avaliacoes == NULL){
+                echo 'Sem Dados no Banco';
+            }else{
+                foreach ($this->avaliacoes as $avaliacoes) : ?>
+                <tr>
+                    <td><?php echo $this->escapeHtml($avaliacoes->tpaval_id); ?></td>
+                    <td><?php echo $this->escapeHtml($avaliacoes->cd); ?></td>
+                    <td><?php echo $this->escapeHtml($avaliacoes->descr); ?></td>
+                    <td>
+                        <a title="Visualizar" href="<?php echo $this->url('home', array("action" => "detalhes", "tpaval_id" => $avaliacoes->tpaval_id,)); ?>">
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach;} ?>
+    </table>
+</div>

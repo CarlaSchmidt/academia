@@ -1,0 +1,25 @@
+<div id="corpo-table"> 
+
+    <div class="panel-title">
+       Editar Tipo de Avaliação
+    </div>
+    <?php
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('editar'));
+    $form->prepare();
+    ?>
+    <?php echo $this->form()->openTag($form); ?>
+
+    <table class="table table-bordered">
+        <?php echo $this->formRow($form->get('tpaval_id')); ?>
+        <tr>
+       <td> <?php echo $this->formRow($form->get('cd')); ?></td>
+       </tr>
+        <tr>
+       <td> <?php echo $this->formRow($form->get('descr')); ?></td>
+       </tr>
+    </table>
+    <?php echo $this->formSubmit($form->get('submit')); ?>
+    <?php echo $this->form()->closeTag(); ?>
+    <a href="<?php echo $this->url('home', array('action' => 'detalhes', 'tpaval_id' => $this->tpaval_id)); ?>"title="Editar" class="but3">Voltar</a>
+</div>
